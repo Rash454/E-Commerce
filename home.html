@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+     <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>E-Commerce HomePage </title>
+</head>
+<body>
+    <!-- NAVBAR -->
+     <nav class="w-full flex items-center justify-between py-4 px-6 border-b border-slate-300 ">
+        
+            <a href="index.html" class="font-['Inter'] font-bold text-[700] size-24px sm:mr-16 sm:pl-16  flex  ">Exclusive</a>
+           
+            <div class="hidden md:flex items-center gap-8">
+            <a href="index.html" class="hover:underline" >Home </a>
+            <a href="contact.html" class="hover:underline">Contact </a>
+            <a href="about.html" class="hover:underline">About </a>
+            <a href="signUp.html" class="hover:underline" >Sign Up </a>
+         </div> 
+         </div>
+           <button class="sm:px-4 sm:hidden   "><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5" />
+      </svg>
+        </button> 
+        <div class="relative hidden md:flex ">
+        <input 
+        type="text"
+        placeholder="What are you looking for?"
+        class=" md:flex items-center font-['Inter'] text-xs py-4 px-4 bg-gray-200 rounded-md  ml-4 mt-4 h-8"
+        />
+        <img src="./images/Vector.png" alt="search icon " class="absolute right-4 top-6 w-4 h-4  ">
+        </div>
+        <div class="relative hidden md:flex items-center gap-4 md:pr-16">
+        <img src="./images/Vector (1).png" alt="heart icon" class="hidden md:flex w-4 h-4 mt-4 ">
+        <img src="./images/Cart1 with buy.png" alt="cart" class="hidden md:flex w-6 h-6 mt-4 ">
+         
+        <!-- component -->
+<style>
+    #sortbox:checked ~ #sortboxmenu {
+        opacity: 1;
+    }
+</style>
+
+<div class="relative">
+    <input type="checkbox" id="sortbox" class="hidden absolute">
+    <label for="sortbox" class="flex items-center space-x-1 cursor-pointer">
+    <span class="text-lg"><img src="./Home images/user.png" alt="user icon" class="hidden md:flex w-8 h-8 mt-4 " ></span>
+    </label>
+
+        <div id="sortboxmenu" class="absolute mt-1 right-1 top-full min-w-max shadow rounded opacity-0 bg-gray-300 border border-gray-400 transition delay-75 ease-in-out z-10">
+        <ul class="block text-right text-gray-900">
+            <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Manage My Account</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">My Order</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">My Cancellations</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">My Reviews</a></li>
+            <li><a href="#" class="block px-3 py-2 hover:bg-gray-200">Logout</a></li>
+
+        </ul>
+    </div>
+</div>
+
+
+    </div>
+    </nav>
+
+    <!-- SideBAR -->
+    <div class="flex ">
+        <aside class="hidden md:block border-r-2 h-88 md:h-auto w-64  border-slate-300  pl-16  "> 
+            <div class="mt-4 md:max-w-lg">
+            <a href="#" class="font-['Poppins']  hover:underline">Woman’s Fashion <br></a>
+            <div class="flex flex-col gap-4">
+            <a href="#" class="font-['Poppins'] hover:underline ">Men’s Fashion <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline">Electronics <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline ">Home & Lifestyle <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline ">Medicine <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline ">Sports & Outdoor <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline">Baby’s & Toys <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline">Groceries & Pets <br></a>
+            <a href="#" class="font-['Poppins'] hover:underline">Health & Beauty <br></a>
+            </div>
+        </div>
+            </aside>
+            <div class=" flex items-center mt-4 pl-4  ">
+                <div class="relative">
+                <img src="./images/indeximgs/heroBanner.png" alt="Hero Banner" class=" pr-16 h-[320px] w-full md:w-328 ">
+                <img src="./images/indeximgs/Frame 563.png" alt="apple icon" class="absolute top-4 left-4 md:top-8 md:left-8 w-16 md:w-auto ">
+                 </div>
+                  <div class="absolute">
+                 <h1 class="flex text-white text-lg pl-8 sm:text-2xl md:text-5xl font-['Inter'] sm:mt-8 sm:pl-16 md:mt-32 md:pl-16">Up to 10% <br> off Voucher</h1>
+                 <button class="rounded-lg ml-8 mt-4 left-4 sm:ml-16 sm:mt-4 sm:left-8 md:left-64 text-black-200 font-[Inter]  md:mt-8 md:mb-8 md:ml-16 bg-gray-200 p-2 hover:bg-gray-300"> Shop Now </button>
+                  </div>
+               </div>
+        </div>
+  
+
+
+          <div class="flex ml-4 mt-16 sm:ml-4 md:ml-16 md:mt-32 "><img src="./images/indeximgs/Rectangle 17.png" alt="Rectangle"> 
+            <div class="text-lg font-[Poppins] text-[#DB4444] pl-4 flex items-center">Today's</div>
+        </div>
+        
+        <div class="sm:flex sm:flex-row  sm:items-end flex flex-col  gap-2 sm:gap-16  font-[Inter] mt-4 ml-4 sm:ml-4 md:ml-16 md:text-5xl font-semibold sm:text-2xl text-xl">
+            Flash Sales   <img src="./images/indeximgs/Group 1000005937.png" alt="group sale" class="relative bottom-1 ">
+           
+            <div class="flex gap-4 sm:ml-16 md:ml-16 lg:ml-64 xl:ml-128  ">
+            <button class="size-8 hover:bg-gray-300 rounded-2xl  " > <img src="./images/indeximgs/Fill With Left Arrow.png" alt="left arrow">
+            </button>
+                <button class="size-8 hover:bg-gray-300 rounded-2xl ">
+                <img src="./images/indeximgs/Fill with Right Arrow.png" alt="right arrow ">
+            </button>
+           </div>
+        </div>
+
+
+        
+<!-- CONTAINER OF CARDS  -->
+<div class=" mx-auto mt-16 ml-4 flex gap-4">
+<!-- CARD 1 -->
+	<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Frame 570.png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						HAVIT HV-G92 Gamepad</h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$120 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$160 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(88)</span>
+				</div>
+				
+			</div>
+	</div>
+
+<!-- CARD 2 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Frame 570 (1).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						AK-900 Wired Keyboard</h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$960 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$1160 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (3).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(75)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+
+
+<!-- CARD 3 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Frame 570 (2).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						IPS LCD Gaming Monitor</h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$370 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$400 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(99)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+
+<!-- CARD 4 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Frame 570 (3).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						S-Series Comfort Chair </h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$375 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$400 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/star-half-filled.png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(99)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+</div>
+
+    <div class="flex items-center justify-center mt-16  ">
+        <button class="rounded-xl bg-[#DB4444] px-8 py-4 text-[#FAFAFA] hover:bg-[#DB4420] ">View All Products </button>
+    </div>
+
+    <hr class="border-gray-300 mt-8">
+
+
+    <div class="flex ml-4 mt-16 sm:ml-4 md:ml-16 md:mt-32 "><img src="./images/indeximgs/Rectangle 17.png" alt="Rectangle"> 
+            <div class="text-lg font-[Poppins] text-[#DB4444] pl-4 flex items-center">Categories</div>
+        </div>
+        
+        <div class="sm:flex sm:flex-row  sm:items-end flex flex-col  gap-2 sm:gap-16  font-[Inter] mt-4 ml-4 sm:ml-4 md:ml-16 md:text-5xl font-semibold sm:text-2xl text-xl">
+          Browse By Category 
+           <div class="flex gap-4 sm:ml-16 md:ml-16 lg:ml-64 xl:ml-128  ">
+            <button class="size-8 hover:bg-gray-300 rounded-2xl  " > <img src="./images/indeximgs/Fill With Left Arrow.png" alt="left arrow">
+            </button>
+                <button class="size-8 hover:bg-gray-300 rounded-2xl ">
+                <img src="./images/indeximgs/Fill with Right Arrow.png" alt="right arrow ">
+            </button>
+           </div>
+        </div>
+          
+          
+
+          <!-- CATEGORY CARDS  -->
+<div class="flex flex-col items-center gap-4 mb-6 mt-16 ">
+        <div class="flex gap-4">
+            <!-- Card 1 -->
+            <div class="hover:translate-y-1 duration-300 bg-white  rounded-lg p-6 flex flex-col items-center">
+                <img src="./images/indeximgs/Category-CellPhone.png" alt="Cellphone">
+                <span class="text-[#000000] text-sm mt-1 font-[Poppins] ">Phones</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="./images/indeximgs/Category-Computer.png" alt="computer">
+                <span class="text-[#000000] text-sm mt-1">Computers</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg p-6 flex flex-col items-center">
+                <img src="./images/indeximgs/Category-SmartWatch.png" alt="smartWatch">
+                <span class="text-[#000000] text-sm mt-1">SmartWatch</span>
+            </div>
+            <!-- Card 4 -->
+            <div class="hover:translate-y-1 duration-300 shadow-md rounded-lg p-6 flex flex-col items-center bg-[#DB4444]">
+                <img src="./images/indeximgs/Category-Camera.png" alt="Camera">
+                <span class="text-[#FAFAFA] text-sm mt-1 ">Camera</span>
+            </div>
+
+            <!-- Card 5 -->
+               <div class="hover:translate-y-1 duration-300 shadow-md rounded-lg p-6 flex flex-col items-center ">
+                <img src="./images/indeximgs/Category-Headphone.png" alt="Headphone">
+                <span class="text-[#000000] text-sm mt-1 ">HeadPhones</span>
+            </div>
+
+
+             <!-- Card 6 -->
+               <div class="hover:translate-y-1 duration-300 shadow-md rounded-lg p-6 flex flex-col items-center ">
+                <img src="./images/indeximgs/Category-Gamepad.png" alt="Gamepad">
+                <span class="text-[#000000] text-sm mt-1 ">Gaming</span>
+            </div>
+
+        </div>
+    </div>
+ 
+
+        <hr class="border-gray-300 mt-8">
+    
+        <div class="flex ml-4 mt-16 sm:ml-4 md:ml-16 md:mt-32 "><img src="./images/indeximgs/Rectangle 17.png" alt="Rectangle"> 
+            <div class="text-lg font-[Poppins] text-[#DB4444] pl-4 flex items-center">This Month</div>
+        </div>
+        
+        <div class="sm:flex sm:flex-row  sm:items-end flex flex-col  gap-2 sm:gap-16  font-[Inter] mt-4 ml-4 sm:ml-4 md:ml-16 md:text-5xl font-semibold sm:text-2xl text-xl">
+          Best Selling Products 
+           <div class="flex gap-4 sm:ml-16 md:ml-16 lg:ml-64 xl:ml-128  ">
+            <button class="text-sm text-white bg-[#DB4444] hover:bg-[#DB4428]  px-8 py-4 rounded-md font-[Poppins] relative bottom-1  " > View All
+            </button>
+               
+           </div>
+        </div>
+          
+        <!-- CONTAINER OF BEST SELLING -->
+        <div class=" mx-auto mt-16 ml-4 flex gap-4">
+<!-- CARD 1 -->
+	<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart.png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						The north coat</h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$260 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$360 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(65)</span>
+				</div>
+				
+			</div>
+	</div>
+
+<!-- CARD 2 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (1).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Gucci duffle bag</h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$960 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$1160 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (3).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(65)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+
+
+<!-- CARD 3 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (2).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						RGB liquid CPU Cooler</h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$160 </span>
+          			<span class="text-xl font-semibold text-gray-400 dark:text-white font-[Poppins] line-through">$170 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(65)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+
+<!-- CARD 4 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (3).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Small BookSelf </h3>
+				</a>
+                <div class="flex items-center gap-4">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$360 </span>
+				</div>
+				<div class="flex items-center mt-2.5 mb-5">
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/star-half-filled.png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(65)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+</div>
+
+
+    <!-- EXPLORE OUR PPRODUCTS SECTION -->
+
+          <div class="flex ml-4 mt-16 sm:ml-4 md:ml-16 md:mt-32 "><img src="./images/indeximgs/Rectangle 17.png" alt="Rectangle"> 
+            <div class="text-lg font-[Poppins] text-[#DB4444] pl-4 flex items-center">Our Products</div>
+        </div>
+        
+        <div class="sm:flex sm:flex-row  sm:items-end flex flex-col  gap-2 sm:gap-16  font-[Inter] mt-4 ml-4 sm:ml-4 md:ml-16 md:text-5xl font-semibold sm:text-2xl text-xl">
+            Explore Our Products
+            <div class="flex gap-4 sm:ml-16 md:ml-16 lg:ml-64 xl:ml-128  ">
+            <button class="size-8 hover:bg-gray-300 rounded-2xl  " > <img src="./images/indeximgs/Fill With Left Arrow.png" alt="left arrow">
+            </button>
+                <button class="size-8 hover:bg-gray-300 rounded-2xl ">
+                <img src="./images/indeximgs/Fill with Right Arrow.png" alt="right arrow ">
+            </button>
+           </div>
+        </div>
+
+
+        
+<!-- CONTAINER OF CARDS  -->
+<div class=" mx-auto mt-16 ml-4 flex gap-4">
+<!-- CARD 1 -->
+	<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (4).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Breed Dry Dog Food</h3>
+				</a>
+                <div class="flex items-center gap-4 mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$100 </span>
+				
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (3).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (3).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(35)</span>
+				</div>
+				
+			</div>
+	</div>
+
+<!-- CARD 2 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (5).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						CANON EOS DSLR Camera</h3>
+				</a>
+                <div class="flex items-center gap-4 mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$360 </span>
+
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (3).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(95)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+
+
+<!-- CARD 3 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (6).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						ASUS FHD Gaming Laptop</h3>
+				</a>
+                <div class="flex items-center gap-4  mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$700 </span>
+				
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(325)</span>
+				</div>
+				
+			</div>
+	</div>
+
+
+
+<!-- CARD 4 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart(7).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Curology Product Set  </h3>
+				</a>
+                <div class="flex items-center gap-4 mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$500 </span>
+
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (3).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(145)</span>
+				</div>
+				
+			</div>
+</div>
+</div>
+
+<!-- CONTAINER 2-->
+            <div class=" mx-auto mt-16 ml-4 flex  gap-4">
+
+            <!-- CARD 5-->
+            <div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (7).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Kids Electric Car</h3>
+				</a>
+                <div class="flex items-center gap-4 mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$960 </span>
+				
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(65) </span>           
+                </div>
+				  <div class="flex gap-2 mt-2">
+                  <span class="w-4 h-4 rounded-full bg-red-500 border-2 border-black"></span>
+                  <span class="w-4 h-4 rounded-full bg-[#DB4444]"></span>
+                </div>
+			</div>
+	</div>
+
+<!-- CARD 6 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (8).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Jr. Zoom Soccer Cleats</h3>
+				</a>
+                <div class="flex items-center gap-4 mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$1160 </span>
+
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(35)</span>
+				</div>
+				<div class="flex gap-2 mt-2">
+                  <span class="w-4 h-4 rounded-full bg-[#EEFF61] border-2 border-black "></span>
+                  <span class="w-4 h-4 rounded-full bg-[#DB4444]"></span>
+                </div>
+			</div>
+	</div>
+
+
+
+
+<!-- CARD 7 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (9).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						GP11 Shooter USB Gamepad</h3>
+				</a>
+                <div class="flex items-center gap-4  mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$660 </span>
+				
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/star-half-filled.png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(55)</span>
+				</div>
+				<div class="flex gap-2 mt-2">
+                  <span class="w-4 h-4 rounded-full bg-[#000000] border-2 border-black "></span>
+                  <span class="w-4 h-4 rounded-full bg-[#DB4444]"></span>
+                </div>
+			</div>
+	</div>
+
+
+
+<!-- CARD 8 -->
+<div class="hover:translate-y-1 duration-300 bg-white shadow-md rounded-lg max-w-sm dark:bg-gray-800 dark:border-gray-700">
+		<a href="#" class="block p-4">
+			<img class="rounded-t-lg p-8 " src="./images/indeximgs/Cart (10).png" alt="product image" >
+        </a>
+			<div class="px-5 pb-5">
+				<a href="#">
+					<h3 class="text-gray-900 font-semibold text-xl tracking-tight dark:text-white">
+						Quilted Satin Jacket  </h3>
+				</a>
+                <div class="flex items-center gap-4 mt-2.5 mb-5">
+					<span class="text-xl font-semibold text-[#DB4444] dark:text-white font-[Poppins]">$660 </span>
+
+                    <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+						
+				     <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+					 <img src="./images/indeximgs/Vector (2).png" alt="star" class="w-5 h-5 text-yellow-300"  >
+
+				     <img src="./images/indeximgs/star-half-filled.png" alt="star" class="w-5 h-5 text-gray-300"   >
+
+					<span class=" text-gray-400 text-xs font-semibold mr-2 px-2.5 py-0.5 rounded dark:bg-gray-200 dark:text-gray-800 ml-3">(55)</span>
+				</div>
+				<div class="flex gap-2 mt-2">
+                  <span class="w-4 h-4 rounded-full bg-[#000000] border-2 border-black "></span>
+                  <span class="w-4 h-4 rounded-full bg-[#DB4444]"></span>
+                </div>
+			</div>
+	</div>
+
+
+</div>
+
+
+     <div class="flex items-center justify-center mt-16  ">
+        <button class="rounded-xl bg-[#DB4444] px-8 py-4 text-[#FAFAFA] hover:bg-[#DB4420] ">View All Products </button>
+    </div>
+
+
+
+	<!-- NEW ARRIVAL SECTION  -->
+	 <div class="flex ml-4 mt-16 sm:ml-4 md:ml-16 md:mt-32 "><img src="./images/indeximgs/Rectangle 17.png" alt="Rectangle"> 
+        <div class="text-lg font-[Poppins] text-[#DB4444] pl-4 flex items-center">Featured</div>
+        </div>
+
+		 <div class="sm:flex sm:flex-row  sm:items-end flex flex-col  gap-2 sm:gap-16  font-[Inter] mt-4 ml-4 sm:ml-4 md:ml-16 md:text-5xl font-semibold sm:text-2xl text-xl">
+            New Arrival</div>
+
+			<!-- CONTAINER -->
+<div class="grid lg:grid-cols-2 gap-6 items-stretch px-4 sm:px-8 lg:px-16 mt-8">
+
+    <!-- PLAYSTATION DIV -->
+    <div class="relative w-full rounded-md aspect-[570/600] bg-black overflow-hidden">
+        <img
+            src="./images/indeximgs/1c360f790c1817d3afa266b3c9f8c81ff0ed4428.png"
+            alt="PlayStation 5"
+            class="absolute inset-0 w-full h-full object-cover"
+        />
+
+        <div class="absolute bottom-2 left-2 sm:bottom-4 sm:left-4 md:bottom-8 md:left-6 text-white">
+            <h2 class="text-2xl font-semibold">PlayStation 5</h2>
+            <p class="text-sm mt-2">
+                Black and White version of the PS5 <br>
+                coming out on sale.
+            </p>
+            <a href="#" class="hover:text-gray-300 inline-block mt-4 border-b border-white">
+                Shop Now
+            </a>
+        </div>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="grid grid-rows-2 gap-4 h-full">
+
+        <!-- WOMEN DIV -->
+        <div class="relative w-full rounded-md aspect-[570/284] bg-black overflow-hidden">
+            <img
+                src="./images/indeximgs/attractive-woman-wearing-hat-posing-black-background 1.png"
+                alt="Women's Collection"
+                class="absolute inset-0 w-full h-full object-cover"
+            />
+
+            <div class="absolute bottom-1 left-1 sm:bottom-4 sm:left-4 md:bottom-8 md:left-6 text-white">
+                <h2 class="text-2xl font-semibold">Women’s Collections</h2>
+                <p class="text-sm mt-2">
+                    Featured woman collections that <br>
+                    give you another vibe.
+                </p>
+                <a href="#" class="hover:text-gray-300 inline-block mt-4 border-b border-white">
+                    Shop Now
+                </a>
+            </div>
+        </div>
+
+        <!-- UNDER WOMEN SECTION -->
+        <div class="grid grid-cols-2 gap-4">
+
+            <!-- SPEAKERS -->
+            <div class="relative w-full rounded-md aspect-[270/284] bg-black flex justify-center items-start pt-6 overflow-hidden">
+                <img
+                    src="./images/indeximgs/69-694768_amazon-echo-png-clipart-transparent-amazon-echo-png 1.png"
+                    alt="Speakers"
+                />
+
+                <div class="absolute bottom-1 left-1 sm:bottom-4 sm:left-4 md:bottom-8 md:left-6 text-white">
+                    <h2 class="text-2xl font-semibold">Speakers</h2>
+                    <p class="text-sm mt-2">Amazon wireless speakers</p>
+                    <a href="#" class="hover:text-gray-300 inline-block mt-4 border-b border-white">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+
+            <!-- PERFUME -->
+            <div class="relative w-full rounded-md aspect-[270/284] bg-black flex justify-center items-start pt-6 overflow-hidden">
+                <img
+                    src="./images/indeximgs/652e82cd70aa6522dd785109a455904c.png"
+                    alt="Perfume"
+                />
+
+                <div class="absolute bottom-1 left-1 sm:bottom-4 sm:left-4 md:bottom-8 md:left-6 text-white">
+                    <h2 class="text-2xl font-semibold">Perfume</h2>
+                    <p class="text-sm mt-2">
+                        GUCCI INTENSE OUD EDP
+                    </p>
+                    <a href="#" class="hover:text-gray-300 inline-block mt-4 border-b border-white">
+                        Shop Now
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+	<!-- BEFORE FOOTER SECTION -->
+	 <div class="flex flex-col items-center gap-4 mb-6 mt-16 ">
+        <div class="flex gap-4">
+            <!-- Card 1 -->
+            <div class="bg-white  rounded-lg p-6 flex flex-col items-center">
+                <img src="./images/indeximgs/Services.png" alt="services">
+                <span class="text-[#000000] text-sm mt-1 font-[Poppins] font-semibold mt-2 ">FREE AND FAST DELIVERY</span>
+				<span class="text-[#000000] text-sm mt-1 font-[Poppins]  mt-2 ">Free delivery for all orders over $140</span>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white  rounded-lg p-6 flex flex-col items-center">
+                <img src="./images/indeximgs/Services (1).png" alt="services">
+                <span class="text-[#000000] text-sm mt-1 font-[Poppins] font-semibold mt-2 ">24/7 CUSTOMER SERVICE</span>
+				<span class="text-[#000000] text-sm mt-1 font-[Poppins]  mt-2 ">Friendly 24/7 customer support</span>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white  rounded-lg p-6 flex flex-col items-center">
+                <img src="./images/indeximgs/Services (2).png" alt="services">
+                <span class="text-[#000000] text-sm mt-1 font-[Poppins] font-semibold mt-2 ">MONEY BACK GUARANTEE</span>
+				<span class="text-[#000000] text-sm mt-1 font-[Poppins]  mt-2 ">We reurn money within 30 days</span>
+            </div>
+           
+
+        </div>
+    </div>
+
+
+			<!-- FOOTER -->
+<!-- component -->
+<footer class="bg-[#000000] dark:bg-gray-900">
+    <div class="container px-6 py-12 mx-auto">
+        <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-5">
+            <div class="sm:col-span-2">
+                <h1 class="max-w-lg text-xl font-['Inter'] font-semibold tracking-tight text-white xl:text-2xl dark:text-white">Exclusive</h1>
+				<h2 class="max-w-md text-sm font-['Inter']  tracking-tight text-white xl:text-lg dark:text-white">Subscribe</h2>
+				<h3 class="max-w-sm text-sm font-['Inter']  tracking-tight text-[#FAFAFA] xl:text-sm dark:text-white">Get 10% off your first order</h3>
+
+                <div class="flex flex-col mx-auto mt-6 space-y-3 md:space-y-0 md:flex-row">
+                    <input id="email" type="text" class="px-4 py-2 text-gray-700 bg-white border rounded-md dark:bg-gray-900 dark:text-gray-300 dark:border-gray-600 focus:border-blue-400 dark:focus:border-blue-300 focus:outline-none focus:ring focus:ring-opacity-40 focus:ring-blue-300" placeholder="Email Address">
+            
+                    <button class="w-full px-6 py-2.5 text-sm font-medium tracking-wider text-white transition-colors duration-300 transform md:w-auto md:mx-4 focus:outline-none bg-gray-800 rounded-lg hover:bg-gray-700 focus:ring focus:ring-gray-300 focus:ring-opacity-80">
+                        Subscribe
+                    </button>
+                </div>
+            </div>
+
+            <div>
+                <p class="font-semibold font-['Inter'] text-[#FAFAFA] dark:text-white">Quick Link</p>
+
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Privacy Policy</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Terms Of Use</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">FAQ</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Contact</a>
+
+				</div>
+            </div>
+			 <div>
+                <p class="font-semibold font-['Inter'] text-[#FAFAFA] dark:text-white">Account</p>
+
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">My Account</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Login / Register</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Cart</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Wishlist</a>
+					<a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">Shop</a>
+
+
+				</div>
+            </div>
+
+             <div>
+                <p class="font-semibold font-['Inter'] text-[#FAFAFA] dark:text-white">Support</p>
+
+                <div class="flex flex-col items-start mt-5 space-y-2">
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">111 Bijoy sarani, <br> Dhaka,  DH 1515, Bangladesh.</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">exclusive@gmail.com</a>
+                    <a href="#" class="text-[#FAFAFA] transition-colors duration-300 dark:text-gray-300 dark:hover:text-[#DB4444] hover:underline hover:text-[#DB4444]">+88015-88888-9999</a>
+            	</div>
+            </div>
+
+        
+        
+        <div class="flex items-center justify-between">
+           
+            <div class="flex -mx-2">
+                <a href="www.facebook.com" target="_blank" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
+					<img src="./images/indeximgs/Vector (4).png" alt="facebook" >
+                
+                </a>
+
+                 <a href="www.instagram.com" target="_blank" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
+					<img src="./images/indeximgs/Group.png" alt="Instagram" >
+                
+                </a>
+
+                <a href="www.linkedin.com" target="_blank" class="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400" aria-label="Reddit">
+					<img src="./images/indeximgs/Icon-Linkedin.png" alt="LinkedIn" >
+                
+                </a>
+            </div>
+        </div>
+    </div>
+	<hr class="my-3 md:my-6 border-gray-100" />
+		<div class="flex flex-wrap items-center md:justify-between justify-center">
+			<div class="w-full md:w-4/12 px-4 mx-auto text-center">
+				<div class="text-sm text-gray-600 dark:text-gray-400 py-1">
+					&copy;
+					<span id="year">Copyright Rimel 2022. All right reserved</span>
+					
+				</div>
+			</div>
+		</div>
+</footer>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
